@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    background-color: #6482AD;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+nav a.active {
+    background-color: #7FA1C3;
+}
+
+nav a:hover {
+    background-color: #E2DAD6;
+    color: black;
+}
+
+h1, h2 {
+    color: #6482AD;
+    margin-bottom: 20px;
+}
+
+p, li {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-list li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.main-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #3e3e3e;
+    color: white;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+.section {
+    background-image: url('./KFSSS.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px; 
+}
+body {
+    background-image: url('../images/KFSSS.jpg');
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+}

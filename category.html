@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC Меню</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        .header {
+            background-color: #d32323;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .category {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .category img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .category h3 {
+            color: #d32323;
+        }
+
+        .category a {
+            text-decoration: none;
+            color: #d32323;
+            font-weight: bold;
+        }
+
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #d32323;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 1000;
+            color: white;
+        }
+
+        #loader .spinner {
+            border: 8px solid rgba(255, 255, 255, 0.2);
+            border-top: 8px solid white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        #loader p {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            letter-spacing: 1.5px;
+            animation: fadeText 2s infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fadeText {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="loader">
+    <div class="spinner"></div>
+    <p>Загрузка...</p>
+</div>
+
+<div class="header">
+    <h1>KFC Меню</h1>
+    <p>Выберите свою любимую категорию</p>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="index.html" class="active">Меню</a>
+        <a href="about.html">О нас</a>
+    </nav>
+</div>
+
+<div class="container">
+    <div class="category">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoYswSZlJ96kUSOMZzW-QSsXv88OlyjgBOYw&s" alt="Баскеты">
+        <h3><a href="basket.html">Баскеты</a></h3>
+    </div>
+    <div class="category">
+        <img src="https://kfc.ee/wp-content/uploads/2022/09/VEGGIE-FILET-BURGER.png" alt="Бургеры">
+        <h3><a href="burger.html">Бургеры</a></h3>
+    </div>
+    <div class="category">
+        <img src="https://w7.pngwing.com/pngs/502/89/png-transparent-fizzy-drinks-computer-icons-cold-drink-food-text-logo-thumbnail.png" alt="Напитки">
+        <h3><a href="drinks.html">Напитки</a></h3>
+    </div>
+    <div class="category">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7YJ3kV6f6BBjhQ1n56YJK7EPSBTpf0rK_AA&s" alt="Десерты">
+        <h3><a href="desserts.html">Десерты</a></h3>
+    </div>
+</div>
+
+<script>
+    window.addEventListener("load", function() {
+        const loader = document.getElementById("loader");
+        loader.style.transition = "opacity 0.5s ease";
+        loader.style.opacity = 0;
+        setTimeout(() => {
+            loader.style.display = "none";
+        }, 500); 
+    });
+</script>
+
+</body>
+</html>
